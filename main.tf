@@ -10,3 +10,9 @@ resource "google_storage_bucket" "static-site-dareit-rulez" {
     not_found_page   = "404.html"
   }
 }
+
+resource "google_storage_default_object_access_control" "public_rule" {
+  bucket = google_storage_bucket.static-site-dareit-rulez.name
+  role   = "READER"
+  entity = "allUsers"
+}
