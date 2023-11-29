@@ -1,4 +1,4 @@
-resource "google_storage_bucket" "static-site-dareit-rulez" {
+resource "google_storage_bucket" "static_site_dareit_rulez" {
   name          = "aga-dareit-static"
   location      = "US"
   force_destroy = true
@@ -12,7 +12,7 @@ resource "google_storage_bucket" "static-site-dareit-rulez" {
 }
 
 resource "google_storage_bucket_iam_member" "member" {
-  bucket = google_storage_bucket.a_bucket.name
+  bucket = google_storage_bucket.static_site_dareit_rulez.name
   role   = "roles/storage.objectViewer"
   member = "allUsers"
 }
