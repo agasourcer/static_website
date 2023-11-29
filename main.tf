@@ -16,3 +16,9 @@ resource "google_storage_bucket_iam_member" "member" {
   role   = "roles/storage.objectViewer"
   member = "allUsers"
 }
+
+resource "google_storage_bucket_object" "index" {
+  name   = "index.html"
+  source = "index.html"
+  bucket = google_storage_bucket.static_site_dareit_rulez.name
+}
