@@ -1,5 +1,5 @@
 resource "google_storage_bucket" "static_site_dareit_rulez" {
-  name          = "aga-dareit-static"
+  name          = "aga-dareit-static2"
   location      = "US"
   force_destroy = true
 
